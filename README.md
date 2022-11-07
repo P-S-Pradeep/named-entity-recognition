@@ -41,8 +41,8 @@ We compile the model and fit the train sets and validation sets,We plot the nece
 
 ## PROGRAM
 ```python
-# Developed By:KUMARAN.B
-# Register Number:212220230026
+# Developed By:Pradeep P S
+# Register Number:212220230034
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
@@ -142,7 +142,7 @@ metrics = pd.DataFrame(model.history.history)
 metrics.head()
 metrics[['accuracy','val_accuracy']].plot()
 metrics[['loss','val_loss']].plot()
-i = 7
+i = 30
 p = model.predict(np.array([X_test[i]]))
 p = np.argmax(p, axis=-1)
 y_true = y_test[i]
@@ -156,13 +156,13 @@ for w, true, pred in zip(X_test[i], y_true, p[0]):
 ## <br><br><br>OUTPUT
 
 ### Training Loss, Validation Loss Vs Iteration Plot
-![Screenshot (463)](https://user-images.githubusercontent.com/75243072/198579628-51b3dabe-bd41-42d0-885d-3683a19e29cb.png)
+![Screenshot 2022-11-07 095335](https://user-images.githubusercontent.com/102652887/200226343-ba81b77f-1160-4371-8f16-d53046f9a370.png)
 
-![Screenshot (464)](https://user-images.githubusercontent.com/75243072/198579658-48658fc8-80dc-4006-84b5-4c8bd655ba26.png)
+![Screenshot 2022-11-07 095420](https://user-images.githubusercontent.com/102652887/200226352-141e7ef0-3aea-4032-a0e6-3f8ea2bd8906.png)
 
 
 ### <br><br><br>Sample Text Prediction
-![Screenshot (462)](https://user-images.githubusercontent.com/75243072/198581100-be4e08ed-ad24-4b31-81fb-58a7fd7ce902.png)
+![image](https://user-images.githubusercontent.com/102652887/200226433-9702b322-5d85-4e88-bc01-09eec8c5ed53.png)
 
 
 ## RESULT
